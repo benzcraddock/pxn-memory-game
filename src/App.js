@@ -91,7 +91,7 @@ function App() {
           />
         ))}
       </div>
-      <p>Your Ghosts Count: {turns}</p>
+      <p>You've turned {turns} time(s) :P hehe</p>
     </div>
   );
 }
