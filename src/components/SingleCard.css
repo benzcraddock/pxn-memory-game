@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.card:hover {
+  transition: transform .2s;
+  transform: scale(1.1);
+}
+
 .card img {
   width: 100%;
   display: block;
@@ -17,6 +22,7 @@
   transform: rotateY(90deg);
   position: absolute;
   transition: all ease-in 0.2s;
+  border: 2px solid rgba(0,255,102,0.2);
 }
 
 .flipped .front {
@@ -28,6 +34,7 @@
 .card .back {
   transition: all ease-in 0.2s;
   transition-delay: 0.2s;
+  border: 2px solid rgba(0,255,102,0.2);
 }
 
 .flipped .back {
