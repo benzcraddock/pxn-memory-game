@@ -76,22 +76,30 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <h1>Let's Play Memory PXN for GHOSTS</h1>
-      <h2>a mini game created by Benye (benyetothe#1279)</h2>
-      <button onClick={shuffleCards}>New Game</button>
-      <div className='card-grid'>
-        {cards.map(card => (
-          <SingleCard 
-            key={card.id} 
-            card={card}
-            handleChoice={handleChoice}
-            flipped={card === choiceOne || card === choiceTwo || card.matched}
-            disabled={disabled}
-          />
-        ))}
+    <div className='wrapper'>
+
+      <div className='title'>
+        <h1>let's play memory pxn for ghosts</h1>
+        <h2>a mini game | built by benye | discord id: benyetothe#1279</h2>
       </div>
-      <p>You've turned {turns} time(s) :P hehe</p>
+
+        <div className='card-grid'>
+          {cards.map(card => (
+            <SingleCard 
+              key={card.id} 
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+
+      <div className='bottomWrapper'>
+        <button onClick={shuffleCards}>new game</button>
+        <h2>you've turned {turns} time(s) :P hehe</h2>
+      </div>
+
     </div>
   );
 }

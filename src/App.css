@@ -1,44 +1,101 @@
-.App {
-  max-width: 860px;
-  margin: 40px auto;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  margin-top: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+
+.middleWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.bottomWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
 }
 
 button {
   background: none;
-  border: 2px solid #dee2e6;
-  padding: 6px 12px;
-  color: #dee2e6;
+  border: 2px solid #00FF66;
+  border-radius: 5px;
+  padding: 6px 40px;
+  color: #00FF66;
   font-weight: bold;
+  font-family: Roboto Mono, sans-serif;
   cursor: pointer;
-  font-size: 1em
+  margin: 5px;
 }
 
 button:hover {
-  background-color: pink;
-  color: #dee2e6
+  background-color: rgba(0,255,102,0.2);
+  transition: all .5s ease;
+  transform: scale(1.2);
 }
 
-.card-grid {
-  margin-top: 40px;
-  margin: 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+.title:hover {
+  transition: all .5s ease;
+  transform: scale(1.1);
 }
 
 h1 {
-  font-size: 1.2em;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 25px;
+  font-size: 1rem;
+  border-bottom: 2px solid #00FF66;
+  width: 75%;
 }
 
 h2 {
-  font-size: .8em;
-  margin-left: 15px;
-  margin-right: 15px
+  font-size: .8rem;
 }
 
-p {
-  padding-bottom: 50px;
+.bottomWrapper > h2:hover {
+  transition: all .5s ease;
+  transform: scale(1.2);
+}
+
+.bottomWrapper h2 {
+  margin-bottom: 50px;
+}
+
+.bottomWrapper button {
+  margin-top: 25px;
+}
+
+/* media queries */
+
+@media (orientation: landscape) {
+  .card-grid {
+    display: grid;
+    width: 35%;
+    margin-top: 10px;
+  }
+}
+
+@media (orientation: portrait) {
+  .card-grid {
+    display: grid;
+    margin-right: 5px;
+    width: 85%;
+  }
 }
