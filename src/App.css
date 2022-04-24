@@ -103,18 +103,18 @@ h2 {
   h1 {
     border: none;
   }
-  .card-grid {
-    display: grid;
-    margin-bottom: 10px;
-    width: 85%;
-  }
   button:hover {
-    background-color: rgba(0,255,102,0.2);
+    background-color: #010101;
     transition: none;
     transform: none;
   }
   .bottomWrapper > h2:hover {
     transition: none;
     transform: none;
+  }
+  .card-grid {
+    display: grid;
+    margin-bottom: 10px;
+    width: 85%;
   }
 }
