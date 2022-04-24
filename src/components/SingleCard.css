@@ -41,3 +41,10 @@
   transform: rotateY(90deg);
   transition-delay: 0s;
 }
+
+@media (orientation: portrait) {
+  .card:hover {
+    transition: none;
+    transform: none;
+  }
+}
